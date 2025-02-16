@@ -6,4 +6,6 @@ interface IntunnelOptions {
   auth: string
 }
 
+export type { Listener } from '@ngrok/ngrok'
+
 export { IntunnelOptions }

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 
-import { VitePluginIntunnel } from 'vite-plugin-intunnel'
+import { VitePluginIntunnel } from '../src'
 import ngrok from '@ngrok/ngrok'
 
 // 需要登录 ngrok 官网获取 ngrok authtoken

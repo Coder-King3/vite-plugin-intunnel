@@ -1,17 +1,21 @@
-import { Plugin } from 'vite'
-import { IntunnelOptions } from './types'
-import type { Listener } from '@ngrok/ngrok'
+import type { IntunnelOptions, Listener } from './types'
 
-function VitePluginIntunnel({ intunnel, port, auth }: IntunnelOptions): Plugin {
+import { PluginOption } from 'vite'
+import colors from 'chalk'
+import consola from 'consola'
+
+function VitePluginIntunnel({
+  intunnel,
+  port,
+  auth
+}: IntunnelOptions): PluginOption {
   let listeners: Listener
 
-  const printUrl = () => console.log(`🌍 Ngrok Tunnel: ${listeners.url()}`)
-
   return {
-    name: 'vite-plugin-intunnel',
+    name: 'vite:intunnel-server',
     apply: 'serve', // 只在开发模式下启用
     async configureServer(server) {
-      if (listeners) return printUrl()
+      if (listeners) return
 
       const addr = port || server.config.server.port
       listeners = await intunnel.forward({
@@ -26,7 +30,16 @@ function VitePluginIntunnel({ intunnel, port, auth }: IntunnelOptions): Plugin {
       const allowedHosts = (server.config.server.allowedHosts as string[]) ?? []
       server.config.server.allowedHosts = [...allowedHosts, intunnelHost]
 
-      printUrl()
+      const _printUrls = server.printUrls
+      server.printUrls = () => {
+        _printUrls()
+
+        consola.log(
+          `  ${colors.green('➜')}  ${colors.bold(
+            'Intunnel Server'
+          )}: ${colors.cyan(listeners.url())}`
+        )
+      }
     }
   }
 }
