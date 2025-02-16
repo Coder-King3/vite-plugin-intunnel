@@ -39,8 +39,8 @@ importers:
         specifier: ^5.4.14
         version: 5.4.14
       vite-plugin-intunnel:
-        specifier: 0.1.2
-        version: 0.1.2
+        specifier: 0.1.3
+        version: 0.1.3
 
 packages:
 
@@ -1107,8 +1107,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  vite-plugin-intunnel@0.1.2:
-    resolution: {integrity: sha512-CNvnfdWUFvmPdevyM38BUdbDZzhQgA1WJpMOHTCoYTxFZUim6vou0Jwk7BUv2ZdGUu+v0NwX0zwrRvM/9DFxdw==}
+  vite-plugin-intunnel@0.1.3:
+    resolution: {integrity: sha512-lP5Ny1HTBlru+ovq+DoT4yObGevi70gA8s2sJ8kBJvzvfZvFRvFcAijJU8LdhHN3xKI0VnlOVOcvh8d9+Eevhg==}
 
   vite@5.4.14:
     resolution: {integrity: sha512-EK5cY7Q1D8JNhSaPKVK4pwBFvaTmZxEnoKXLG/U9gmdDcihQGNzFlgIvaxezFR4glP1LsuiedwMBqCXH3wZccA==}
@@ -2011,7 +2011,7 @@ snapshots:
     dependencies:
       '@jsdevtools/version-bump-prompt': 6.1.0
 
-  vite-plugin-intunnel@0.1.2: {}
+  vite-plugin-intunnel@0.1.3: {}
 
   vite@5.4.14:
     dependencies:
