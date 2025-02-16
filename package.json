@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-intunnel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Vite plugin that securely exposes local development servers to the internet using Ngrok.",
   "type": "module",
   "keywords": [

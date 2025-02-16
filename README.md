@@ -2,7 +2,7 @@
 
 A Vite plugin that securely exposes local development servers to the internet using Ngrok.
 
-[![NPM version](https://img.shields.io/npm/v/vite-plugin-md?color=a1b858)](https://www.npmjs.com/package/vite-plugin-md)
+[![NPM version](https://img.shields.io/npm/v/vite-plugin-intunnel?color=a1b858)](https://www.npmjs.com/package/vite-plugin-intunnel)
 
 ## Installing this Plugin
 
