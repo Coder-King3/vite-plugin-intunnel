@@ -1,0 +1,48 @@
+{
+  "name": "vite-plugin-intunnel",
+  "version": "0.1.0",
+  "description": "A Vite plugin that securely exposes local development servers to the internet using Ngrok.",
+  "type": "module",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "intunnel"
+  ],
+  "homepage": "https://github.com/Coder-King3/vite-plugin-intunnel",
+  "bugs": "https://github.com/Coder-King3/vite-plugin-intunnel/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Coder-King3/vite-plugin-intunnel"
+  },
+  "license": "MIT",
+  "author": "King3 <w2196592083@gmail.com>",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format cjs,esm --clean ",
+    "watch": "tsup src/index.ts --dts --format cjs,esm --watch",
+    "dev": "npm run build -- --watch",
+    "example:dev": "npm -C example run dev",
+    "releases": "pwsh publish.ps1",
+    "versihint": "npx bump",
+    "empty-out": "pwsh empty-out.ps1"
+  },
+  "devDependencies": {
+    "@ngrok/ngrok": "^1.4.1",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3",
+    "version-bump-prompt": "^6.1.0",
+    "vite": "^5.4.14"
+  }
+}

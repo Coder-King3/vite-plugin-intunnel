@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url(./assets/index-bg.svg);
+}
+
+.Welcome {
+  width: 600px;
+  margin-bottom: 120px;
+  text-align: center;
+  color: #34495e;
+}
+.Welcome .title {
+  margin: 10px 0;
+  font-size: 40px;
+}
+.Welcome .info {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.Welcome .list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.list .btn a {
+  display: inline-block;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1171ee;
+  line-height: 50px;
+  background: #eaf2ff;
+  border: 1px solid #b3d5ff;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.list .btn a:hover {
+  background: #1e80ff;
+  color: white;
+}
